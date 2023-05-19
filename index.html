@@ -1,71 +1,113 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
 
-		<title>reveal.js</title>
+    <title>reveal.js</title>
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/black.css" />
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>
-					<h1>Package Managers</h1>
-				</section>
-				<section>
-					<h2>What can you pick?</h2>
-					<ul>
-						<li>yarn</li>
-						<li>yarn 2</li>
-						<li>npm</li>
-						<li>pnpm</li>
-					</ul>
-				</section>
-				<section>
-					<h2>Recap on dependency resolution</h2>
-				</section>
-				<section>
-					<h2>Flat resolution</h2>
-				    	<pre>
-							<code data-trim data-noescape>
-								{
-								  "name": "playground",
-								  "version": "1.0.0",
-								  "main": "index.js",
-								  "license": "MIT",
-								  "dependencies": {
-								    "babel-core": "^6.26.3",
-								    "lodash": "^4.17.21"
-								  }
-								}
-							</code>
-						</pre>
-					  	<img data-src="images/flat_resolution_node_modules.png">
-				</section>
-			</div>
-		</div>
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+    <style>
+      .container {
+        display: flex;
+      }
+      .col {
+        flex: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1>Package Managers</h1>
+        </section>
+        <section>
+          <h2>What can you pick?</h2>
+          <ul>
+            <li>yarn</li>
+            <li>yarn 2</li>
+            <li>npm</li>
+            <li>pnpm</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Recap on dependency resolution</h2>
+        </section>
+        <section>
+          <h2>Flat resolution</h2>
+          <div class="container">
+            <div class="col">
+              <pre>
+                <code data-trim data-noescape>
+                {
+                  "name": "playground",
+                  "version": "1.0.0",
+                  "main": "index.js",
+                  "license": "MIT",
+                  "dependencies": {
+                    "babel-core": "^6.26.3",
+                    "lodash": "^4.17.21"
+                  }
+                }
+                </code>
+              </pre>
+            </div>
+            <div class="col">
+              <img data-src="images/flat_resolution_node_modules.png" />
+            </div>
+          </div>
+        </section>
+        <section>
+          <h2>Conflicts</h2>
+          <div class="container">
+            <div class="col">
+              <pre>
+                <code data-trim data-noescape>
+                {
+                  "name": "playground",
+                  "version": "1.0.0",
+                  "main": "index.js",
+                  "license": "MIT",
+                  "dependencies": {
+                    "babel-core": "^6.26.3",
+                    "lodash": "^3.10.1"
+                  }
+                }
+                </code>
+              </pre>
+            </div>
+            <div class="col">
+              <img data-src="images/flat_resolution_node_modules_conflict.png" />
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+    </script>
+  </body>
 </html>
