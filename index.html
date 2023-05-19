@@ -16,8 +16,39 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section>
+					<h1>Package Managers</h1>
+				</section>
+				<section>
+					<h2>What can you pick?</h2>
+					<ul>
+						<li>yarn</li>
+						<li>yarn 2</li>
+						<li>npm</li>
+						<li>pnpm</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Recap on dependency resolution</h2>
+				</section>
+				<section>
+					<h2>Flat resolution</h2>
+				    	<pre>
+							<code data-trim data-noescape>
+								{
+								  "name": "playground",
+								  "version": "1.0.0",
+								  "main": "index.js",
+								  "license": "MIT",
+								  "dependencies": {
+								    "babel-core": "^6.26.3",
+								    "lodash": "^4.17.21"
+								  }
+								}
+							</code>
+						</pre>
+					  	<img data-src="images/flat_resolution_node_modules.png">
+				</section>
 			</div>
 		</div>
 
