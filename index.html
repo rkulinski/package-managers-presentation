@@ -91,6 +91,71 @@
             </div>
           </div>
         </section>
+        <section>
+          <h2>Problems with npm and yarn</h2>
+          <ul>
+            <li>They use copy/paste mechanism for dependencies</li>
+            <li>Similar in terms of performance (yarn a bit faster)</li>
+            <li>They already have "successors": pnpm and yarn 2</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Yarn 2</h2>
+          <ul>
+            <li>No node_modules -> migration is required</li>
+            <li>PnP -plug and play mode (on by default)</li>
+            <li>Adoption of yarn 2 is very slow, no big players using it</li>
+            <li>You can upgrade and keep node_modules</li>
+          </ul>
+        </section>
+        <section>
+          <h2>pnpm</h2>
+          <ul>
+            <li>Faster and better than npm</li>
+            <li>Saving disk space - using symlinks</li>
+            <li>Non flat modules structure</li>
+            <li>Smaller and more readable lock file</li>
+            <li>Easy migration</li>
+            <li>Can support PnP (off by default)</li>
+            <li>Supported by Prisma, Vercel and used by Microsoft, Vue and more</li>
+            <li>Node 16</li>
+          </ul>
+        </section>
+        <section>
+          <h2>pnpm</h2>
+          <div class="container">
+            <div class="col">
+              <img data-src="images/pnpm_root_symlinks.png" />
+              <img data-src="images/pnpm_child_symlinks.png" />
+            </div>
+            <div class="col">
+              <img data-src="images/pnpm_packages.png" />
+            </div>
+          </div>
+        </section>
+        <section>
+          <h2>Performance</h2>
+          <img data-src="https://d33wubrfki0l68.cloudfront.net/9fe65ac4623840888f08bfea47c625b61b662737/0bc85/img/benchmarks/alotta-files.svg" style="height: 700px"/>
+        </section>
+        <section>
+          <h2>Workspaces</h2>
+          <p>Npm, yarn, pnpm supports workspaces</p>
+          <p>All can work with lerna or NX</p>
+          <h3>No significant differences here</h3>
+        </section>
+        <section>
+          <h2>What should you choose?</h2>
+          <p>pnpm is better than npm</p>
+          <p>yarn 2 is better than yarn 1</p>
+          <p>pnpm vs yarn 2</p>
+        </section>
+        <section>
+          <h2>PNPM</h2>
+          <p>Easy transition - no significant changes required</p>
+          <p>Fast enough</p>
+          <p>Gaining popularity</p>
+          <p>Requires Node 16</p>
+        </section>
       </div>
     </div>
 
